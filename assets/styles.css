@@ -1,0 +1,15 @@
+* {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+}
+
+.hp {
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+
+nav a:hover {
+    transform: translateY(-10px); /* Move up slightly */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all changes */
+  }
+  
