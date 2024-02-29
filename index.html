@@ -5,25 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GO CREATION </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" >
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&family=Nunito&display=swap" rel="stylesheet"></head>
 <body>
-    <section class="h-screen hp">
-    <nav class="p-5 flex justify-between">
-        <div class="branding"><img src="./assets/logo-w.png" width="75"></div>
-            <div class="px-10 py-2 rounded-full self-center text-white space-x-10 border-2 border-white border-opacity-75">
-                <a href="#" >L'agence</a>
-                <a href="#" >Nos Services</a>
-                <a href="#" >Nos Projets</a>
+    <section id="hp" class="h-screen hp">
+    <nav class=" px-10 py-5 flex justify-between ">
+        <div class="branding"></div>
+            <div class=" nav-mid px-10 py-2 rounded-full self-center space-x-10 border-2 border-opacity-75">
+                <a href="#" class="navlink" >L'agence</a>
+                <a href="#" class="navlink" >Nos Services</a>
+                <a href="#" class="navlink" >Nos Projets</a>
             </div>
-                <a href="#" class="bg-white text-black px-5 py-2 rounded-full self-center space-x-10 border-2 border-white border-opacity-75
-                hover:bg-transparent hover:text-white transition-all duration-300 ease-in-out">
-                Commencer
-            </a>
+            <div class="toggle-switch">
+                <label class="switch-label">
+                  <input type="checkbox" id="theme-checkbox" class="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>        
     </nav>
+
+        <div>
+            <div class="hp-mid flex flex-col justify-center items-center place-content-center absolute w-full">
+                <h1 class="text-5xl font-bold text-center">GO CREATION<br>
+                    OÙ LA CRÉATIVITÉ RENCONTRE LA STRATÉGIE</h1>
+                <p class="mt-5">Agence de marketing & communication digitale</p>
+                <a href="#" class="commencer-button mt-7 px-5 py-2 rounded-full self-center space-x-10 ">
+                    Commencer
+                </a>
+            </div>
+        </div>
+
+    <a href="#services" class="scroll text-white" aria-label="scroll down"><span></span></a>
+
+</section>
+<section id="services" class="h-screen hp flex place-content-center">
+    <div class="service-section">
+        <h1 class="servicestext top-0 text-center text-5xl" >Nos services</h1>
+        <div class="service" onclick="toggleService('digital-marketing')">
+            <div class="service-title">
+                <span>+</span>
+                <span>Marketing Digital</span>
+            </div>
+            <div class="service-description flex" id="digital-marketing">
+                <img src="./assets/marketing-w.webp">
+                Nous orchestrons des campagnes de marketing digital complètes, de la stratégie à l'exécution, couvrant le marketing sur les réseaux sociaux et le SEO. Notre objectif est d'augmenter votre visibilité en ligne, d'attirer et de convertir plus de clients grâce à des méthodes éprouvées et des analyses de données avancées.
+            </div>
+        </div>
+        
+        <div class="service" onclick="toggleService('communication-strategy')">
+            <div class="service-title">
+                <span>+</span>
+                <span>Stratégie de Communication</span>
+            </div>
+            <div class="service-description flex" id="communication-strategy">
+                Notre équipe développe des stratégies de communication personnalisées, alignées sur les buts et l'essence de votre entreprise. Nous vous aidons à créer un message cohérent et percutant qui résonne avec votre public cible, renforce votre marque et soutient vos objectifs commerciaux à long terme.
+                <img src="./assets/meeting-w.webp">
+            </div>
+        </div>
+        
+        <div class="service" onclick="toggleService('web-design')">
+            <div class="service-title">
+                <span>+</span>
+                <span>Conception et développement web</span>
+            </div>
+            <div class="service-description flex" id="web-design">
+                <img src="./assets/webdev-w.webp">
+                Spécialistes de la conception web, nous créons des expériences utilisateur exceptionnelles en concevant des sites web esthétiques, fonctionnels et adaptatifs. Nous mettons l'accent sur l'alignement avec votre image de marque et l'optimisation pour les moteurs de recherche, assurant ainsi une présence web efficace et mémorable.
+            </div>
+        </div>
+        
+        <div class="service" onclick="toggleService('visual-identity')">
+            <div class="service-title">
+                <span>+</span>
+                <span>Identité visuelle</span>
+            </div>
+            <div class="service-description flex" id="visual-identity">
+                Nous créons et renouvelons l'identité visuelle de votre entreprise pour raconter votre histoire de manière visuelle et captivante. Du logo à la charte graphique et aux supports marketing, nous assurons une présence de marque cohérente et forte qui se démarque et reste gravée dans l'esprit de vos clients.
+                <img src="./assets/visual.webp">
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section id="" class="h-screen hp flex place-content-center">
 </section>
 </body>
+<script src="./scripts.js"></script>
 </html>
